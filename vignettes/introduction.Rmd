@@ -1,0 +1,43 @@
+---
+title: "introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction to the FARS Package
+
+The `Built` package provides functions to read, process, summarize, and visualize
+
+### Basic workflow
+
+Package includes set of functions that work together to process data
+
+#### 1. Creating Filenames
+
+To generate a standardized FARS filename for a specific year, use `make_filename()`:
+
+```{r}
+library(Built)
+make_filename(2013)
+```
+
+#### 2. Summarizing Data
+
+Package allows one to summarize accidents by month and year
+
+```r
+# Example usage:
+# fars_summarize_years(c(2013, 2014))
+```
+
+#### 3. Visualizing Accidents on a map
+
+Plot accident locations for specific state and year using `fars_map_state()`:
+
+```r
+# Example Usage:
+# fars_map_state(1, 2013)
+```
